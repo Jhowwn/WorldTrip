@@ -1,6 +1,6 @@
 import { Flex, Heading } from "@chakra-ui/react";
 
-export default function ContinentBanner() {
+export default function ContinentBanner({continent}) {
     return (
         <Flex
             w='100%'
@@ -18,7 +18,7 @@ export default function ContinentBanner() {
             <Heading
                 color='gray.100'
                 justifyContent={['center', 'relative']}
-            >Europa</Heading>
+            >{continent.data.title}</Heading>
 
         </Flex>
     )

@@ -1,11 +1,13 @@
 import { Flex, Heading, Text } from "@chakra-ui/react";
+import { ContinentProps } from "../../pages/continent/[slug]";
 
-export default function Informations() {
+export default function Informations({continent}: ContinentProps) {
+    const {countries, languages, cities} = continent.data
     return (
         <Flex alignItems="center" justifyContent="space-between">
             <Flex direction="column" justify="center" align={["flex-start", "flex-start", "center"]}>
                 <Heading fontSize={["2xl", "5xl"]} color="yellow.400" fontWeight="500">
-                    50
+                    {countries}
                 </Heading>
                 <Text fontWeight="500" fontSize={["md", "xl"]} color="gray.700">
                     países
@@ -14,7 +16,7 @@ export default function Informations() {
 
             <Flex direction="column" justify="center" align={["flex-start", "flex-start", "center"]}>
                 <Heading fontSize={["2xl", "5xl"]} color="yellow.400" fontWeight="500">
-                    60
+                    {languages}
                 </Heading>
                 <Text fontWeight="500" fontSize={["md", "xl"]} color="gray.700">
                     línguas
@@ -23,7 +25,7 @@ export default function Informations() {
 
             <Flex direction="column" justify="center" align={["flex-start", "flex-start", "center"]}>
                 <Heading fontSize={["2xl", "5xl"]} color="yellow.400" fontWeight="500">
-                    27
+                    {cities}
                 </Heading>
                 <Text fontWeight="500" fontSize={["md", "xl"]} color="gray.700">
                     cidades +100
